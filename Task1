@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string replace(const string& str, const string& oldSubstr, const string& newSubstr) {
+
+    size_t pos = str.find(oldSubstr);
+    if (pos == string::npos) {
+        return str;  
+    }
+    string result = str.substr(0, pos) + newSubstr + replace(str.substr(pos + oldSubstr.length()), oldSubstr, newSubstr);
+
+    return result;
+}
+
+int main() {
+    string str = "hello world";
+    string oldSubstr = "llo";
+    string newSubstr = "y";
+
+    string replacedStr = replace(str, oldSubstr, newSubstr);
+
+    cout << replacedStr << endl;
+
+    return 0;
+}
