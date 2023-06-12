@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string b(const string& inputString) {
+    string a;
+    for (char c : inputString) {
+        a.push_back(toupper(c));
+    }
+    return a;
+}
+
+int main() {
+    string input = "hello world";
+    string a = b(input);
+    cout << a << endl;
+    return 0;
+}
