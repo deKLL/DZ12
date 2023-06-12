@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+char aa(const string& str) {
+    int charCount[256] = {0};
+
+    for (char c : str) {
+/*не знаю як робити
+    
+    int main() {
+    string str = "hello world";
+    char b = a(str);
+    cout << "The most repeated character in \"" << str << "\" is '" << c << "'" << endl;
+
+    return 0;
+}
